@@ -26,9 +26,7 @@ app.set('port',port)
 //llamado de las rutas
 userRoutes(app)
 
-server.listen(process.env.PORT, 'backendchuko-production.up.railway.app' || 'localhost', function() {
-    console.log('aplicacion de Node en port: '+ port + ' Inicializado...')
-})
+app.listen(process.env.PORT)
 
 app.get('/',(req, res) =>{
     res.send('Ruta raiz del backend')
