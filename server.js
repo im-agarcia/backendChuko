@@ -7,23 +7,24 @@ const cors = require('cors')
 
 //importar rutas
 
-const users = require('./routes/userRoutes')
+//const users = require('./routes/userRoutes')
 const userRoutes = require('./routes/userRoutes')
 
-const port = process.env.PORT || 3000
-app.set('port', port)
+//const port = process.env.PORT || 3000
+//app.set('port', port)
 
-app.use(logger('dev'))
-app.use(express.json())
+//app.use(logger('dev'))
+/* app.use(express.json())
 app.use(express.urlencoded({
     extended: true
-}))
+})) */
 
-app.use(cors())
+/* app.use(cors())
 app.disable('x-poweres-by')
-app.set('port',port)
+app.set('port',port) */
 
 //llamado de las rutas
+
 userRoutes(app)
 
 app.listen(process.env.PORT)
